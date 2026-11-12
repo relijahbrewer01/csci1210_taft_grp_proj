@@ -1,58 +1,45 @@
- # Group Web Project
+# Taft Highway Church of Christ Website
 
-## Project Overview
+**ETSU CSCI 1210 Final Project · Group 3 · Best Web Developers Ever**
 
-**Project name:** [Name of project]  
-**Description:** [Briefly describe the website and its intended audience.]  
-**Live site:** [Link when available]
+This five-page website helps first-time visitors plan a visit and gives church members a place to find news and upcoming events. The current version uses static HTML and a shared CSS file.
 
-## Team Responsibilities
+## Pick a page
 
-| Team member | Responsibilities |
-|---|---|
-| Elijah | [Assign responsibilities] |
-| Ryan | [Assign responsibilities] |
-| Jack | [Assign responsibilities] |
-| Landon | [Assign responsibilities] |
-| Maverik | [Assign responsibilities] |
+Claim a page in the team chat and put your name in the **Owner** column. Start with the existing draft. If you’re waiting on information from the church, put the question in the **Still needed** column so the group can follow up.
 
-## Features
+| Page                       | Owner     | Still needed                                                                                                                                                                         |
+| -------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Home (`index.html`)        | Unclaimed | Add the confirmed worship schedule and approved banner artwork or photo when available. Check the **Plan Your Visit** link.                                                          |
+| About (`about.html`)       | Unclaimed | Add the church’s approved history, mission, beliefs, and leadership details. Publish each draft section when its content is ready.                                                   |
+| Visit (`visit.html`)       | Unclaimed | Add confirmed worship times, the street address, written directions, a map link, and details about parking, accessibility, and visiting with children.                               |
+| Bulletin (`bulletin.html`) | Unclaimed | Add the first approved announcements and upcoming events. Include dates, locations, and confirmed times where applicable. Replace the temporary message once entries are posted.     |
+| Contact (`contact.html`)   | Unclaimed | Add verified email and phone links, the street address, and directions. Publish social links, community information, or a prayer request contact method if the church approves them. |
 
-- [Feature one]
-- [Feature two]
-- [Feature three]
+## Coordinate shared work
 
-## Tech Stack
+- **Navigation:** Use **Home · About · Visit · Bulletin · Contact** in both the header and footer. Set `aria-current="page"` on the active page’s links.
+- **Church details:** Home and Visit should show the same worship schedule. Use the same verified street address wherever it appears. Let the other page owners know when the church confirms or corrects those details.
+- **Shared styles:** All five pages use `css/style.css`. Coordinate changes there with the group because they can affect every page.
+- **Design references:** Use Phase 2A for the **Hearth & Evergreen** visual design and Phase 2B for usability and accessibility. The five pages in the table are the current sitemap.
+- **Bulletin updates:** Add entries directly in `bulletin.html` for this version. Uploading a bulletin file and updating the page from it is a future enhancement.
 
-- **Frontend:** [Languages and frameworks]
-- **Backend:** [If applicable]
-- **Tools and services:** [Libraries, APIs, or other tools]
+## Run the site locally
 
-## Getting Started
+1. Clone the repository or open your existing copy in GitHub Desktop.
+2. Open `index.html` in a browser. Keep the HTML files in the project root and the stylesheet at `css/style.css` so the relative links work.
+3. Refresh the browser after saving a change. Use the header and footer links to move between pages.
 
-### Prerequisites
+## Share your changes
 
-- [Required software or tools]
+1. Create a branch for your page, such as `update-visit`.
+2. Commit and push your changes from GitHub Desktop.
+3. Open a pull request and ask a teammate to review it. In the description, say what you changed, what you checked, and what still needs confirmation.
 
-### Installation and Usage
+### Before requesting review
 
-1. Clone this repository.
-2. Install dependencies: `[install command]`
-3. Start the project: `[run command]`
-
-## Milestones
-
-| Milestone | Target date | Status |
-|---|---|---|
-| Planning and design | [Date] | Not started |
-| Build core features | [Date] | Not started |
-| Testing and polish | [Date] | Not started |
-| Final presentation | [Date] | Not started |
-
-## Team Workflow
-
-Record task owners in the responsibility table. Use branches for changes, test before submitting, and have a teammate review before merging.
-
-## Notes and Resources
-
-- [Add meeting notes, decisions, and useful links here.]
+- [ ] Open the page at desktop and phone widths. Enlarge the text and check that nothing clips or forces horizontal scrolling.
+- [ ] Use `Tab` to check the skip link, visible focus, and the order of links and buttons.
+- [ ] Check the header, footer, page links, and current-page indicator.
+- [ ] Give informative images descriptive alt text and decorative images `alt=""`.
+- [ ] Check that published church details are confirmed and draft placeholders are hidden.
