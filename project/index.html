@@ -1,77 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | [Your Church Name]</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <!-- EDIT: Change [Your Church Name] in the header AND footer of each page. -->
-  <header class="site-header">
-    <div class="nav-wrap">
-      <a class="site-name" href="index.html">[Your Church Name]</a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="index.html" aria-current="page">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="connect.html">Connect</a>
-        <a href="schedule.html">Schedule</a>
-        <a href="gallery.html">Missions &amp; Activities</a>
-      </nav>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Taft Highway Church of Christ</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h1>Welcome to [Your Church Name]</h1>
-        <p class="lead">[Write a short, welcoming message for visitors here.]</p>
-        <a class="button" href="schedule.html">Service Times</a>
-        <a class="button button-outline" href="about.html">Learn About Us</a>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a class="site-name" href="index.html">Taft Highway Church of Christ</a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="about.html">About</a>
+          <a href="visit.html">Visit</a>
+          <a href="bulletin.html">Bulletin</a>
+          <a href="contact.html">Contact</a>
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <section>
-      <div class="container">
-        <h2>We're Glad You're Here</h2>
-        <p>[Introduce your church: who you are, where you meet, and what visitors can expect.]</p>
-        <!-- PHOTO: Replace the block below with:
-             <img class="photo" src="images/church.jpg" alt="Outside of our church">
-             Put the actual photo inside a new folder named images. -->
-        <div class="photo-placeholder">[Add a photo of your church here]</div>
-      </div>
-    </section>
-
-    <section class="soft-section">
-      <div class="container">
-        <h2>Explore Our Church</h2>
-        <div class="grid">
-          <article class="card">
-            <h3>About Us</h3>
-            <p>[One sentence about your beliefs, history, or church family.]</p>
-            <a href="about.html">Read More</a>
-          </article>
-          <article class="card">
-            <h3>Get Connected</h3>
-            <p>[One sentence about getting involved or contacting the church.]</p>
-            <a href="connect.html">Connect With Us</a>
-          </article>
-          <article class="card">
-            <h3>Missions &amp; Activities</h3>
-            <p>[One sentence about serving your community and mission trips.]</p>
-            <a href="missions.html">See Activities</a>
-          </article>
+    <main id="main-content" tabindex="-1">
+      <section class="hero">
+        <div class="container">
+          <h1>Welcome to Taft Highway Church of Christ</h1>
+          <p class="lead">
+            We’d love to have you join us for worship in Signal Mountain,
+            Tennessee.
+          </p>
+          <a class="button" href="visit.html">Plan Your Visit</a>
+          <a class="button button-outline" href="about.html">Learn About Us</a>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p><strong>[Your Church Name]</strong></p>
-      <p>[Church Street Address] · [City, State]</p>
-      <p>&copy; 2026 [Your Church Name]</p>
-    </div>
-  </footer>
-</body>
+      <section>
+        <div class="container">
+          <h2>We're Glad You're Here</h2>
+          <p>
+            Planning your first visit? Find directions and learn what to expect
+            on our <a href="visit.html">Visit page</a>.
+          </p>
+          <!-- Add the church-approved worship schedule here. Use the same days and times on the Visit page. -->
+          <!-- Add the approved church photo here. Use class="photo" and alt text that describes the image. -->
+        </div>
+      </section>
+
+      <section class="soft-section">
+        <div class="container">
+          <h2>Explore Our Church</h2>
+          <div class="grid">
+            <article class="card">
+              <h3>About Us</h3>
+              <p>Get to know our congregation and what we believe.</p>
+              <a href="about.html">Read About Our Church</a>
+            </article>
+            <article class="card">
+              <h3>Bulletin</h3>
+              <p>Find church news, announcements, and upcoming events.</p>
+              <a href="bulletin.html">View the Bulletin</a>
+            </article>
+            <article class="card">
+              <h3>Contact</h3>
+              <p>
+                Reach out if you have a question about the church or your visit.
+              </p>
+              <a href="contact.html">Contact the Church</a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p><strong>Taft Highway Church of Christ</strong></p>
+        <!-- Add the church’s verified street address here. -->
+        <nav aria-label="Footer navigation">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="about.html">About</a>
+          <a href="visit.html">Visit</a>
+          <a href="bulletin.html">Bulletin</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <p>&copy; 2026 Taft Highway Church of Christ</p>
+      </div>
+    </footer>
+  </body>
 </html>
