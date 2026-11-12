@@ -162,6 +162,7 @@ p {
   display: inline-flex;
   align-items: center;
   min-height: var(--target-size);
+  text-decoration: none;
 }
 
 .site-name {
@@ -432,4 +433,140 @@ p {
 .explorecenter {
     text-align: center;
     margin-bottom: 40px;
+}
+
+.map-section {
+  display: grid;
+  place-items: center;
+  justify-items: start;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  background: var(--section);
+}
+
+/*Used Ai to help shape the box*/
+.iframe1 {
+  width: 100%;
+  max-width: 600px;
+  height: 450px;
+  border: 0;
+  border-radius: var(--radius);
+}
+
+.center {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.carousel-wrapper {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--evergreen);
+}
+
+/* Keeps radio buttons inside the carousel so the page never scrolls */
+.carousel-wrapper input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+}
+
+.slides {
+  display: flex;
+  width: 300%; /* 100% per slide (3 slides = 300%) */
+  transition: transform 0.4s ease-in-out;
+}
+
+.slide {
+  width: 33.3333%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Slide movement triggers */
+#slide-1:checked ~ .slides { transform: translateX(0%); }
+#slide-2:checked ~ .slides { transform: translateX(-33.3333%); }
+#slide-3:checked ~ .slides { transform: translateX(-66.6666%); }
+
+/* Previous & Next Arrow Buttons */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: var(--target-size);
+  height: var(--target-size);
+  border-radius: 50%;
+  background: rgba(23, 27, 29, 0.75);
+  border: 1px solid var(--border);
+  color: var(--ivory);
+  font-size: 1.25rem;
+  cursor: pointer;
+  user-select: none;
+  z-index: 2;
+}
+
+.arrow:hover {
+  background: var(--brick);
+  border-color: var(--brick);
+  color: var(--charcoal);
+}
+
+.prev { left: 0.75rem; }
+.next { right: 0.75rem; }
+
+/* Show only the arrows for the active slide */
+#slide-1:checked ~ .arrows-1,
+#slide-2:checked ~ .arrows-2,
+#slide-3:checked ~ .arrows-3 {
+  display: inline-flex;
+}
+
+/* Bottom Navigation Dots */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.625rem;
+  padding: 0.75rem;
+  background: var(--evergreen);
+}
+
+.dots label {
+  width: 0.75rem;
+  height: 0.75rem;
+  background: var(--border);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dots label:hover {
+  background: var(--sage);
+}
+
+/* Highlight active dot */
+#slide-1:checked ~ .dots label[for="slide-1"],
+#slide-2:checked ~ .dots label[for="slide-2"],
+#slide-3:checked ~ .dots label[for="slide-3"] {
+  background: var(--brick);
+}
+
+a.button.button-center {
+  display: flex;
+  width: fit-content;
+  margin-inline: auto;
 }
