@@ -78,17 +78,6 @@
 
       </section>
 
-      <!-- Uncomment this section once the church confirms its worship schedule.
-    <section>
-      <div class="container">
-        <h2>Worship Schedule</h2>
-        <ul>
-          <li>[Service name, day, and time with time zone]</li>
-        </ul>
-      </div>
-    </section>
-    -->
-      <!-- Keep the worship schedule consistent with the Home page. -->
 
       <section>
         <div class="container center">
@@ -108,27 +97,39 @@
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3260.42192179525!2d-85.36043168869415!3d35.19595805636439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8860f6a119331d35%3A0x1b3119fa6dcf3acb!2s554%20US-127%2C%20Signal%20Mountain%2C%20TN%2037377!5e0!3m2!1sen!2sus!4v1794502516558!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
       </iframe>
 
-      <!-- Text -->
-      <div>
-        <h2>Visit Us</h2>
-        <p class="lead">We are located right off Main Street with free parking behind the building.</p>
-        <p><strong>Address:</strong> 554 US-127, Signal Mountain, TN 37377</p>
-        <a href="directions.html" class="button">Get Directions</a>
-      </div>
-
+<!-- USED AI TO HELP MAKE THE DIRECTIONS BUTTON WORK, I did not know how to do it -->
+    <div>
+      <h2>Visit Us</h2>
+      <p class="lead">We are located right off Main Street with free parking behind the building.</p>
+      <p><strong>Address:</strong> 554 US-127, Signal Mountain, TN 37377</p>
+      
+      <!-- The button triggers the custom navigation script -->
+      <a href="#" onclick="startNativeNavigation(event)" class="button">Get Directions</a>
     </div>
-  </div>
-</section>
 
-      <!-- Uncomment this section when the church has approved the visitor details.
-    <section>
-      <div class="container">
-        <h2>What to Expect</h2>
-        <p>[Describe what happens during worship and where visitors should go when they arrive.]</p>
-        <p>[Include any confirmed details for families visiting with children.]</p>
-      </div>
-    </section>
-    -->
+    <script>
+    function startNativeNavigation(event) {
+      event.preventDefault();
+      
+      const address = "554+US-127,+Signal+Mountain,+TN+37377";
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      // 1. If it's an Apple Device (iPhone/iPad), use Apple's native deep link map engine
+      if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        window.location.href = "maps://maps.google.com/maps?daddr=" + address + "&ll=";
+      } 
+      // 2. If it's an Android Device, use the strict Android Navigation Intent system
+      else if (/android/i.test(userAgent)) {
+        window.location.href = "google.navigation:q=" + address + "&mode=d";
+      } 
+      // 3. Desktop/Fallback: Open standard Google Maps Routing API in a new tab
+      else {
+        window.open("https://www.google.com/maps/dir/?api=1&destination=" + address, "_blank");
+      }
+    }
+    </script>
+
+</section>
 
       <section>
         <div class="container">
@@ -141,7 +142,6 @@
     <footer class="site-footer">
       <div class="container">
         <p><strong>Taft Highway Church of Christ</strong></p>
-        <!-- Add the same verified street address used in Getting Here. -->
         <nav aria-label="Footer navigation">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
