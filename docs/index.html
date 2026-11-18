@@ -4,14 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home | Taft Highway Church of Christ</title>
+    <meta
+      name="description"
+      content="Get to know Taft Highway Church of Christ in Signal Mountain, Tennessee, and find information for your first visit."
+    />
+
+    <!-- Shared styles load first so the Home banner rules below can override them. -->
     <link rel="stylesheet" href="css/style.css" />
 
     <style>
+      /* Darken the background photo so the welcome text stays legible. */
       .hero {
-        background-image: linear-gradient(
-            rgba(0, 0, 0, 0.55),
-            rgba(0, 0, 0, 0.55)
-          ),
+        background-image:
+          linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
           url("images/index-worship-background.webp");
         background-size: cover;
         background-position: center;
@@ -25,6 +30,7 @@
         color: white;
       }
 
+      /* The secondary button uses white text and border over the photo. */
       .hero .button-outline {
         color: white;
         border-color: white;
@@ -32,8 +38,10 @@
     </style>
   </head>
   <body>
+    <!-- The skip link lets keyboard users jump to the main content. -->
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
+    <!-- Shared header. aria-current marks Home as the active page. -->
     <header class="site-header">
       <div class="nav-wrap">
         <a class="site-name" href="index.html">Taft Highway Church of Christ</a>
@@ -48,6 +56,7 @@
     </header>
 
     <main id="main-content" tabindex="-1">
+      <!-- Welcome banner and the main links for first-time visitors. -->
       <section class="hero">
         <div class="container">
           <h1 class="explorecenter">Welcome to Taft Highway Church of Christ</h1>
@@ -60,17 +69,19 @@
         </div>
       </section>
 
+      <!-- Visitor introduction. The Visit page holds directions and arrival details. -->
       <section>
         <div class="container">
           <h2 class="explorecenter">We're Glad You're Here</h2>
           <p>
             Planning your first visit? Find directions and learn what to expect
- on our <a href="visit.html">Visit page</a>.
+            on our <a href="visit.html">Visit page</a>.
           </p>
-        <hr />
+          <hr />
         </div>
       </section>
 
+      <!-- Page shortcuts. The shared grid stacks the cards on smaller screens. -->
       <section class="soft-section">
         <div class="container">
           <h2 class="explorecenter">Explore Our Church</h2>
@@ -80,11 +91,13 @@
               <p>Get to know our congregation and what we believe.</p>
               <a href="about.html">Read About Our Church</a>
             </article>
+
             <article class="card">
               <h3>Bulletin</h3>
               <p>Find church news, announcements, and upcoming events.</p>
               <a href="bulletin.html">View the Bulletin</a>
             </article>
+
             <article class="card">
               <h3>Contact</h3>
               <p>
@@ -97,6 +110,7 @@
       </section>
     </main>
 
+    <!-- Shared footer. Keep these contact details in sync with the Contact page. -->
     <footer class="site-footer">
       <div class="container">
         <p><strong>Taft Highway Church of Christ</strong></p>
