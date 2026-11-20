@@ -4,11 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact | Taft Highway Church of Christ</title>
+    <meta
+      name="description"
+      content="Get in touch with Taft Highway Church of Christ in Signal Mountain, Tennessee, or find directions for your visit."
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- The skip link lets keyboard users jump to the main content. -->
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
+    <!-- Shared header. aria-current marks Contact as the active page. -->
     <header class="site-header">
       <div class="nav-wrap">
         <a class="site-name" href="index.html">Taft Highway Church of Christ</a>
@@ -33,33 +39,33 @@
         </div>
       </section>
 
+      <!-- The two contact cards sit side by side on wider screens and stack on phones. -->
       <section>
         <div class="container">
-          <h2>Contact Information</h2>
+          <h2 id="contact-information" tabindex="-1">Contact Information</h2>
           <div class="grid two">
             <article class="card">
               <h3>Get in Touch</h3>
               <ul>
-                <li>Email: relijahbrewer@gmail.com</li>
-                <li>Phone number: 423-805-8344</li>
+                <li>
+                  Email:
+                  <a href="mailto:relijahbrewer@gmail.com">relijahbrewer@gmail.com</a>
+                </li>
+                <li>Phone: <a href="tel:+14238058344">(423) 805-8344</a></li>
               </ul>
-              
             </article>
+
             <article class="card">
               <h3>Getting Here</h3>
-              <ul>
-              <li>Signal Mountain, Tennessee</li>
-              <li>Address: 554 US-127</li>
-              <li>If you need another form of directions, you can use the map link that can be found on the Visit page.</li>
-              </ul>
-              <!-- Add the verified street address and written directions as text, plus a descriptive map link. -->
+              <p>554 US-127, Signal Mountain, TN 37377</p>
+              <!-- The Visit page has the map and directions. -->
               <a href="visit.html">Plan Your Visit</a>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- Remove hidden from each section when the church has confirmed its details. -->
+      <!-- Remove hidden from individual cards when their details are ready to publish. -->
       <section class="soft-section">
         <div class="container">
           <h2>Find Your Community</h2>
@@ -67,36 +73,54 @@
             <article class="card">
               <h3>Youth Ministry</h3>
               <ul>
-                <li>Class starts at 9:00 AM on Sundays an hour before main service begins.</li>
-                <li>There is no Youth Ministry available during Sunday evening services.</li>
-                <li>Classes will include both highschool and college age people.</li>
+                <li>
+                  Sunday class starts at 9:00 AM, one hour before worship.
+                </li>
+                <li>
+                  Youth Ministry is unavailable during Sunday evening worship.
+                </li>
+                <li>High school and college students are welcome.</li>
               </ul>
             </article>
-            <article class="card"hidden>
+
+            <article class="card" hidden>
               <h3>Small Groups</h3>
               <ul>
-                <li>We are currently looking for more members so that we could create small groups!</li>
+                <li>
+                  We are currently looking for more members so that we could
+                  create small groups!
+                </li>
               </ul>
             </article>
+
             <article class="card" hidden>
               <h3>Volunteer Opportunities</h3>
               <ul>
-                <li>We are preparing to do a Toy Drive for local children that are in need for the Holidays.</li>
+                <li>
+                  We are preparing to do a Toy Drive for local children that are
+                  in need for the Holidays.
+                </li>
               </ul>
             </article>
           </div>
         </div>
       </section>
 
+      <!-- Prayer requests use the existing email and phone links. -->
       <section>
         <div class="container">
           <h2>Prayer Requests</h2>
-          <p>We would love to pray for you. Please submit your prayer request below! We are also availiable for in-person prayer requests at the scheduled opened times.</p>
-          <a href="bulletin.html">Bulletin</a>
+          <p>
+            We’d be glad to pray for you. Use our
+            <a href="#contact-information">contact information</a> to share a
+            request, or speak with us in person when you visit.
+          </p>
+          <a href="bulletin.html">View the Church Bulletin</a>
         </div>
       </section>
     </main>
 
+    <!-- Keep the shared footer’s contact details in sync across all five pages. -->
     <footer class="site-footer">
       <div class="container">
         <p><strong>Taft Highway Church of Christ</strong></p>

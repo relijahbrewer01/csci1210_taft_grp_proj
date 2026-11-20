@@ -3,16 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Taft Highway Church of Christ</title>
     <meta
       name="description"
       content="Get to know Taft Highway Church of Christ in Signal Mountain, Tennessee. Learn about our congregation, worship, and ministers."
     />
-    <title>About | Taft Highway Church of Christ</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- The skip link lets keyboard users jump to the main content. -->
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
+    <!-- Shared header. aria-current marks About as the active page. -->
     <header class="site-header">
       <div class="nav-wrap">
         <a class="site-name" href="index.html">Taft Highway Church of Christ</a>
@@ -26,8 +28,9 @@
       </div>
     </header>
 
-    <main class="about-page" id="main-content" tabindex="-1">
-      <!-- WHO WE ARE -->
+    <!-- The about-page class scopes this page’s layout rules in style.css. -->
+    <main id="main-content" class="about-page" tabindex="-1">
+      <!-- The congregation introduction and welcome panel stack on smaller screens. -->
       <section class="about-welcome">
         <div class="container about-split">
           <div>
@@ -58,7 +61,7 @@
         </div>
       </section>
 
-      <!-- OUR FAITH AND WORSHIP -->
+      <!-- Beliefs in the main column, with a separate list of worship practices. -->
       <section class="about-faith">
         <div class="container about-split">
           <div>
@@ -102,42 +105,44 @@
         </div>
       </section>
 
-      <!-- FELLOWSHIP -->
+      <!-- Keep the heading and the full description as the two grid items. -->
       <section class="about-fellowship">
         <div class="container about-split">
           <h2>A Family Beyond Sunday</h2>
-          <p>
-            Our fellowship extends beyond the walls of our building. As a small
-            congregation, we have the opportunity to know and care for one
-            another personally.
-          </p>
-          <p>
-            Whether through prayer, encouraging cards, shared meals, Bible
-            studies, or supporting those facing difficult times, we strive to
-            demonstrate the love of Christ in everyday life.
-          </p>
-          <p>
-            We may be small in number, but our love for one another is not
-            measured by our size.
-          </p>
+          <div>
+            <p>
+              Our fellowship extends beyond the walls of our building. As a
+              small congregation, we have the opportunity to know and care for
+              one another personally.
+            </p>
+            <p>
+              Whether through prayer, encouraging cards, shared meals, Bible
+              studies, or supporting those facing difficult times, we strive to
+              demonstrate the love of Christ in everyday life.
+            </p>
+            <p>
+              We may be small in number, but our love for one another is not
+              measured by our size.
+            </p>
+          </div>
         </div>
       </section>
 
-      <!-- MEET OUR MINISTERS -->
+      <!-- The minister cards sit side by side on wider screens and stack on phones. -->
       <section class="about-ministers">
         <div class="container">
           <h2>Meet Our Ministers</h2>
 
           <div class="about-minister-grid">
-            <!-- DAVID WIKE -->
+            <!-- Initials are decorative because the full names already appear in the headings. -->
             <article class="about-minister">
-              <div class="about-minister-heading">
+              <header class="about-minister-heading">
                 <span class="about-initials" aria-hidden="true">DW</span>
                 <div>
                   <h3>David Wike</h3>
                   <p class="about-role">Minister &amp; Preacher</p>
                 </div>
-              </div>
+              </header>
 
               <p>
                 David is a passionate and devoted student of Scripture who
@@ -151,15 +156,14 @@
               </p>
             </article>
 
-            <!-- ELIJAH BREWER -->
             <article class="about-minister">
-              <div class="about-minister-heading">
+              <header class="about-minister-heading">
                 <span class="about-initials" aria-hidden="true">EB</span>
                 <div>
                   <h3>Elijah Brewer</h3>
                   <p class="about-role">College &amp; Youth Minister</p>
                 </div>
-              </div>
+              </header>
 
               <p>
                 Elijah teaches our college and youth Bible classes on Sunday
@@ -176,15 +180,15 @@
         </div>
       </section>
 
-      <!-- HISTORY: HIDDEN UNTIL VERIFIED -->
+      <!-- The hidden attribute keeps history off the page until verified copy is ready. -->
       <section hidden>
         <div class="container">
           <h2>Our History</h2>
-          <!-- Add verified congregation history here before publishing. -->
+          <!-- Add verified congregation history here before removing hidden. -->
         </div>
       </section>
 
-      <!-- CLOSING INVITATION -->
+      <!-- Close with a link to the Visit page for service and arrival details. -->
       <section class="about-invitation">
         <div class="container">
           <div class="about-invitation-panel">
@@ -206,6 +210,7 @@
       </section>
     </main>
 
+    <!-- Keep the shared footer’s contact details in sync across all five pages. -->
     <footer class="site-footer">
       <div class="container">
         <p><strong>Taft Highway Church of Christ</strong></p>

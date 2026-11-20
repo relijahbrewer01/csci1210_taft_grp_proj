@@ -149,7 +149,15 @@ p {
   margin: 0 0 1em;
 }
 
+<<<<<<< Updated upstream
 /* Larger introductory text, used in banners and beside the map on Visit. */
+=======
+<<<<<<< HEAD
+/* Larger introductory text used in page banners. */
+=======
+/* Larger introductory text, used in banners and beside the map on Visit. */
+>>>>>>> 92249537f23fd532f06ce1f3cbd8a069880eef28
+>>>>>>> Stashed changes
 .lead {
   font-size: clamp(1.125rem, 1rem + 0.7vw, 1.375rem);
 }
@@ -200,7 +208,6 @@ p {
   color: var(--ivory);
   font-size: 1.5rem;
   font-weight: 700;
-  text-decoration: none;
 }
 
 .site-name:hover {
@@ -248,21 +255,23 @@ p {
    Banners and buttons
    -------------------------------------------------------------------------- */
 
-/* The Home section below supplies the image treatment for this banner. */
-.hero {
-  padding-block: clamp(3rem, 9vw, 6.5rem);
-  background: radial-gradient(
-    ellipse at top right,
-    var(--evergreen),
-    var(--charcoal) 70%
-  );
+/* Use the same divider on the Home hero and the shared page banners. */
+.hero,
+.page-banner {
   border-bottom: 1px solid var(--border);
 }
 
+<<<<<<< Updated upstream
 /* Intro panels at the top of Bulletin and Contact. */
+=======
+<<<<<<< HEAD
+/* Intro panels on Visit, Bulletin, and Contact use a solid background. */
+=======
+/* Intro panels at the top of Bulletin and Contact. */
+>>>>>>> 92249537f23fd532f06ce1f3cbd8a069880eef28
+>>>>>>> Stashed changes
 .page-banner {
   background: var(--evergreen);
-  border-bottom: 1px solid var(--border);
 }
 
 .page-banner p:last-child {
@@ -325,6 +334,7 @@ p {
 
 /* These cards are shared by Home, Bulletin, and Contact. */
 .card {
+  --card-accent: #db9676;
   text-align: center;
   padding: 45px 30px;
   border: 2px solid #536354;
@@ -347,7 +357,7 @@ p {
   display: block;
   width: 65px;
   height: 4px;
-  background-color: #db9676;
+  background-color: var(--card-accent);
   margin: 15px auto 0;
   border-radius: 5px;
 }
@@ -358,23 +368,28 @@ p {
   color: #c5cec1;
 }
 
+/* Card links share accent color and typography. */
 .card a {
-  display: inline-block;
-  margin-top: 15px;
-  color: #db9676;
+  color: var(--card-accent);
   font-size: 1.1rem;
   font-weight: bold;
+}
+
+/* Only standalone card links get extra spacing. Links in lists stay inline. */
+.card > a {
+  display: inline-block;
+  margin-top: 15px;
   text-decoration: none;
 }
 
-.card a:hover {
+.card > a:hover {
   text-decoration: underline;
 }
 
 /* Lift the card and change its border when the pointer is over it. */
 .card:hover {
   transform: translateY(-6px);
-  border-color: #db9676;
+  border-color: var(--card-accent);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
@@ -473,21 +488,53 @@ p {
    Home page
    -------------------------------------------------------------------------- */
 
+<<<<<<< Updated upstream
 /* The style block in index.html overrides the banner image, padding, and text color. */
+=======
+<<<<<<< HEAD
+/* Darken the background photo so the welcome text stays legible. */
+=======
+/* The style block in index.html overrides the banner image, padding, and text color. */
+>>>>>>> 92249537f23fd532f06ce1f3cbd8a069880eef28
+>>>>>>> Stashed changes
 .hero {
+  background-color: var(--charcoal);
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("images/Index-worship-background.webp");
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("../images/index-worship-background.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   padding: 100px 40px;
   color: white;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+.hero h1,
+.hero .lead {
+  color: white;
+}
+
+/* The secondary button uses white text and border over the photo. */
+.hero .button-outline {
+  color: white;
+  border-color: white;
+}
+
+/* Use dark text over the sage hover fill. */
+.hero .button-outline:hover {
+  color: var(--charcoal);
+}
+
+/* Center the welcome, introduction, and Explore Our Church headings on Home. */
+.home-heading {
+=======
+>>>>>>> Stashed changes
 /* Center the welcome, introduction, and Explore Our Church headings on Home. */
 .explorecenter {
+>>>>>>> 92249537f23fd532f06ce1f3cbd8a069880eef28
   text-align: center;
   margin-bottom: 40px;
 }
@@ -496,18 +543,16 @@ p {
    Visit page
    -------------------------------------------------------------------------- */
 
-/* Directions and map */
-.map-section {
-  display: grid;
-  place-items: center;
-  justify-items: start;
-  padding: clamp(1rem, 3vw, 1.5rem);
-  background: var(--section);
-}
-
 /* Map iframe styling was developed with AI assistance. */
 /* Limit the map embed's width so it fits the Visit page's directions column. */
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+.visit-map {
+=======
+>>>>>>> Stashed changes
 .iframe1 {
+>>>>>>> 92249537f23fd532f06ce1f3cbd8a069880eef28
   width: 100%;
   max-width: 600px;
   height: 450px;
@@ -526,7 +571,7 @@ p {
   margin-inline: auto;
 }
 
-/* Photo carousel. The radio inputs track which slide is selected. */
+/* Shared frame for the current Visit photo and the optional carousel. */
 .carousel-wrapper {
   position: relative;
   max-width: 600px;
@@ -537,7 +582,7 @@ p {
   background: var(--evergreen);
 }
 
-/* Keep the radio controls positioned within the carousel when focused. */
+/* Optional carousel controls for when Visit has multiple approved photos. */
 .carousel-wrapper input[type="radio"] {
   position: absolute;
   opacity: 0;
@@ -549,7 +594,15 @@ p {
 
 .slides {
   display: flex;
+<<<<<<< Updated upstream
   width: 400%; /* 100% per slide (4 slides = 400%) */
+=======
+<<<<<<< HEAD
+  width: 300%; /* The track holds three full-width slides. */
+=======
+  width: 400%; /* 100% per slide (4 slides = 400%) */
+>>>>>>> 92249537f23fd532f06ce1f3cbd8a069880eef28
+>>>>>>> Stashed changes
   transition: transform 0.4s ease-in-out;
 }
 
@@ -613,7 +666,7 @@ p {
   right: 0.75rem;
 }
 
-/* Each slide has its own pair of arrow labels in visit.html. */
+/* Reveal the arrow pair associated with the selected slide. */
 #slide-1:checked ~ .arrows-1,
 #slide-2:checked ~ .arrows-2,
 #slide-3:checked ~ .arrows-3,
@@ -798,7 +851,10 @@ a.button.button-center {
   border-radius: 50%;
   background: var(--charcoal);
   color: var(--sage);
-  font: 700 1.125rem Georgia, "Times New Roman", serif;
+  font:
+    700 1.125rem Georgia,
+    "Times New Roman",
+    serif;
 }
 
 .about-page .about-role {
@@ -840,5 +896,18 @@ a.button.button-center {
 
   .about-page .about-fellowship .about-split {
     gap: 0.75rem;
+  }
+}
+
+/* Skip hover and carousel motion when the visitor prefers reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .slides,
+  .dots label {
+    transition: none;
+  }
+
+  .card:hover {
+    transform: none;
   }
 }

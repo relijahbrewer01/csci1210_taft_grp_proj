@@ -4,11 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bulletin | Taft Highway Church of Christ</title>
+    <meta
+      name="description"
+      content="Find church news, announcements, and upcoming events from Taft Highway Church of Christ in Signal Mountain, Tennessee."
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- The skip link lets keyboard users jump to the main content. -->
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
+    <!-- Shared header. aria-current marks Bulletin as the active page. -->
     <header class="site-header">
       <div class="nav-wrap">
         <a class="site-name" href="index.html">Taft Highway Church of Christ</a>
@@ -30,13 +36,17 @@
         </div>
       </section>
 
-      <!-- Remove this section after posting the first bulletin entries. -->
+      <!-- Remove this empty-state message when you publish the first bulletin entries. -->
       <section>
         <div class="container">
           <p>Check back for our first bulletin.</p>
         </div>
       </section>
-      <!-- Remove hidden from each section when the church has confirmed its details. -->
+
+      <!--
+        Copy one card for each approved announcement.
+        Remove hidden from the section when its cards are ready.
+      -->
       <section hidden>
         <div class="container">
           <h2>Announcements</h2>
@@ -50,17 +60,19 @@
           </div>
         </div>
       </section>
-      <!-- Remove hidden from each section when the church has confirmed its details. -->
-      <section hidden class="soft-section">
+
+      <!-- Add confirmed events in date order, then remove hidden to publish the list. -->
+      <section class="soft-section" hidden>
         <div class="container">
           <h2>Upcoming Events</h2>
           <div class="grid">
             <article class="card">
               <h3>[Event name]</h3>
-              <p>
-                <time datetime="YYYY-MM-DD">[Day and date]</time> · [Time, if
-                confirmed]
-              </p>
+              <!--
+                Replace the date placeholder with a time element.
+                Set datetime to the real date in YYYY-MM-DD format.
+              -->
+              <p>[Day, date, and time if confirmed]</p>
               <p>[Location]</p>
               <p>[What to expect and how to participate.]</p>
             </article>
@@ -68,10 +80,11 @@
         </div>
       </section>
 
+      <!-- Publish only prayer requests the church has approved for public sharing. -->
       <section hidden>
         <div class="container">
           <h2>Prayer Requests</h2>
-          <!-- Add the church-approved way to share a prayer request. -->
+          <!-- Use cards for approved public requests. Direct private requests to Contact. -->
           <div class="grid">
             <article class="card">
               <h3>[Prayer request title]</h3>
@@ -85,6 +98,7 @@
       </section>
     </main>
 
+    <!-- Keep the shared footer’s contact details in sync across all five pages. -->
     <footer class="site-footer">
       <div class="container">
         <p><strong>Taft Highway Church of Christ</strong></p>
