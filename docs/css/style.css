@@ -197,9 +197,18 @@ p {
 }
 
 .site-name {
+  gap: 0.55rem;
   color: var(--ivory);
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+/* The decorative icon and church name share one Home link. */
+.site-name::before {
+  content: "";
+  flex: 0 0 1.7rem;
+  height: 1.7rem;
+  background: url("../images/church-icon.png") center / contain no-repeat;
 }
 
 .site-name:hover {
