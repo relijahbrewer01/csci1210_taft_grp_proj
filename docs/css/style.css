@@ -149,15 +149,7 @@ p {
   margin: 0 0 1em;
 }
 
-<<<<<<< Updated upstream
-/* Larger introductory text, used in banners and beside the map on Visit. */
-=======
-<<<<<<< HEAD
 /* Larger introductory text used in page banners. */
-=======
-/* Larger introductory text, used in banners and beside the map on Visit. */
->>>>>>> 92249537f23fd532f06ce1f3cbd8a069880eef28
->>>>>>> Stashed changes
 .lead {
   font-size: clamp(1.125rem, 1rem + 0.7vw, 1.375rem);
 }
@@ -261,15 +253,7 @@ p {
   border-bottom: 1px solid var(--border);
 }
 
-<<<<<<< Updated upstream
-/* Intro panels at the top of Bulletin and Contact. */
-=======
-<<<<<<< HEAD
 /* Intro panels on Visit, Bulletin, and Contact use a solid background. */
-=======
-/* Intro panels at the top of Bulletin and Contact. */
->>>>>>> 92249537f23fd532f06ce1f3cbd8a069880eef28
->>>>>>> Stashed changes
 .page-banner {
   background: var(--evergreen);
 }
@@ -488,15 +472,7 @@ p {
    Home page
    -------------------------------------------------------------------------- */
 
-<<<<<<< Updated upstream
-/* The style block in index.html overrides the banner image, padding, and text color. */
-=======
-<<<<<<< HEAD
 /* Darken the background photo so the welcome text stays legible. */
-=======
-/* The style block in index.html overrides the banner image, padding, and text color. */
->>>>>>> 92249537f23fd532f06ce1f3cbd8a069880eef28
->>>>>>> Stashed changes
 .hero {
   background-color: var(--charcoal);
   background-image:
@@ -509,9 +485,6 @@ p {
   color: white;
 }
 
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
 .hero h1,
 .hero .lead {
   color: white;
@@ -530,11 +503,6 @@ p {
 
 /* Center the welcome, introduction, and Explore Our Church headings on Home. */
 .home-heading {
-=======
->>>>>>> Stashed changes
-/* Center the welcome, introduction, and Explore Our Church headings on Home. */
-.explorecenter {
->>>>>>> 92249537f23fd532f06ce1f3cbd8a069880eef28
   text-align: center;
   margin-bottom: 40px;
 }
@@ -545,14 +513,7 @@ p {
 
 /* Map iframe styling was developed with AI assistance. */
 /* Limit the map embed's width so it fits the Visit page's directions column. */
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
 .visit-map {
-=======
->>>>>>> Stashed changes
-.iframe1 {
->>>>>>> 92249537f23fd532f06ce1f3cbd8a069880eef28
   width: 100%;
   max-width: 600px;
   height: 450px;
@@ -571,7 +532,7 @@ p {
   margin-inline: auto;
 }
 
-/* Shared frame for the current Visit photo and the optional carousel. */
+/* Visit photo carousel. The frame clips the track to one slide at a time. */
 .carousel-wrapper {
   position: relative;
   max-width: 600px;
@@ -582,7 +543,7 @@ p {
   background: var(--evergreen);
 }
 
-/* Optional carousel controls for when Visit has multiple approved photos. */
+/* Keep the native radio controls keyboard-accessible inside the photo frame. */
 .carousel-wrapper input[type="radio"] {
   position: absolute;
   opacity: 0;
@@ -594,15 +555,7 @@ p {
 
 .slides {
   display: flex;
-<<<<<<< Updated upstream
-  width: 400%; /* 100% per slide (4 slides = 400%) */
-=======
-<<<<<<< HEAD
-  width: 300%; /* The track holds three full-width slides. */
-=======
-  width: 400%; /* 100% per slide (4 slides = 400%) */
->>>>>>> 92249537f23fd532f06ce1f3cbd8a069880eef28
->>>>>>> Stashed changes
+  width: 400%; /* The track holds four full-width slides. */
   transition: transform 0.4s ease-in-out;
 }
 
@@ -702,6 +655,15 @@ p {
 #slide-3:checked ~ .dots label[for="slide-3"],
 #slide-4:checked ~ .dots label[for="slide-4"] {
   background: var(--brick);
+}
+
+/* Show the focused slide control at its matching dot. */
+#slide-1:focus-visible ~ .dots label[for="slide-1"],
+#slide-2:focus-visible ~ .dots label[for="slide-2"],
+#slide-3:focus-visible ~ .dots label[for="slide-3"],
+#slide-4:focus-visible ~ .dots label[for="slide-4"] {
+  outline: 2px solid var(--sage);
+  outline-offset: 3px;
 }
 
 /* Center the Contact the Church button at the bottom of Visit. */

@@ -28,9 +28,7 @@
       </div>
     </header>
 
-<<<<<<< HEAD
     <main id="main-content" tabindex="-1">
-      <!-- Show the existing church photo until more photos are ready for the carousel. -->
       <section class="page-banner">
         <div class="container center">
           <h1>Plan Your Visit</h1>
@@ -38,93 +36,99 @@
             We'd be glad to have you join us for worship.
           </p>
 
-          <div class="carousel-wrapper">
-            <img
-              class="photo"
-              src="images/church.jpg"
-              width="454"
-              height="300"
-              alt="Brick church building with a white steeple"
+          <!-- The AI-assisted carousel uses native radios to select one of four photos. -->
+          <div class="carousel-wrapper" role="group" aria-label="Church photos">
+            <input
+              type="radio"
+              name="carousel"
+              id="slide-1"
+              aria-label="Photo 1 of 4: Sign at Taft Highway Church"
+              checked
             />
+            <input
+              type="radio"
+              name="carousel"
+              id="slide-2"
+              aria-label="Photo 2 of 4: A front shot of the church"
+            />
+            <input
+              type="radio"
+              name="carousel"
+              id="slide-3"
+              aria-label="Photo 3 of 4: A corner shot of the church"
+            />
+            <input
+              type="radio"
+              name="carousel"
+              id="slide-4"
+              aria-label="Photo 4 of 4: A wide shot of the church"
+            />
+
+            <div class="slides">
+              <div class="slide">
+                <img
+                  src="images/fshot-taft.jpg"
+                  alt="A front shot of the church"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="images/corner-shot-taft.jpg"
+                  alt="A corner shot of the church"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="images/fwide_shot-taft.jpg"
+                  alt="A wide shot of the church"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="images/sign-taft.jpg"
+                  alt="Sign at Taft Highway Church"
+                />
+              </div>
+            </div>
+
+            <!-- Each arrow label selects the previous or next radio. -->
+            <label for="slide-4" class="arrow prev arrows-1" aria-hidden="true"
+              >&#10094;</label
+            >
+            <label for="slide-2" class="arrow next arrows-1" aria-hidden="true"
+              >&#10095;</label
+            >
+
+            <label for="slide-1" class="arrow prev arrows-2" aria-hidden="true"
+              >&#10094;</label
+            >
+            <label for="slide-3" class="arrow next arrows-2" aria-hidden="true"
+              >&#10095;</label
+            >
+
+            <label for="slide-2" class="arrow prev arrows-3" aria-hidden="true"
+              >&#10094;</label
+            >
+            <label for="slide-4" class="arrow next arrows-3" aria-hidden="true"
+              >&#10095;</label
+            >
+
+            <label for="slide-3" class="arrow prev arrows-4" aria-hidden="true"
+              >&#10094;</label
+            >
+            <label for="slide-1" class="arrow next arrows-4" aria-hidden="true"
+              >&#10095;</label
+            >
+
+            <div class="dots" aria-hidden="true">
+              <label for="slide-1"></label>
+              <label for="slide-2"></label>
+              <label for="slide-3"></label>
+              <label for="slide-4"></label>
+            </div>
           </div>
         </div>
       </section>
-=======
-
-
-      <section>
-        <div class="center">
-          <h1 class="container title-w-sub">Plan Your Visit</h1>
-          <p class="center">We'd be glad to have you join us for worship.</p>
-        </div>
-
-<br>
-
-
-
- <!-- Carousel Code was created with the help of AI!-->
-    <section>
-    <div class="carousel-wrapper">
-      <!-- AI Suggested I added these to allow for the buttons to appear on the carousel and change when that one is selected -->
-      <input type="radio" name="carousel" id="slide-1" checked />
-      <input type="radio" name="carousel" id="slide-2" />
-      <input type="radio" name="carousel" id="slide-3" />
-      <input type="radio" name="carousel" id="slide-4" />
-
-      <!-- The 3 images for the carousel -->
-      <div class="slides">
-        <div class="slide">
-          <img src="images/sign-taft.jpg" alt="Sign at Taft Highway Church" />
-        </div>
-        <div class="slide">
-          <img src="images/fshot-taft.jpg" alt="A front shot of the church" />
-        </div>
-        <div class="slide">
-          <img src="images/corner-shot-taft.jpg" alt="A corner shot of the church" />
-        </div>
-        <div class="slide">
-          <img src="images/fwide_shot-taft.jpg" alt="A wide shot of the church" />
-        </div>
-      </div>
-
-
-      <!-- Navigation buttons for the carousel - AI Assisted as I did not know how to do it. -->
-      <!-- Arrows for Slide 1 -->
-      <label for="slide-4" class="arrow prev arrows-1" aria-label="Previous slide">&#10094;</label>
-      <label for="slide-2" class="arrow next arrows-1" aria-label="Next slide">&#10095;</label>
-
-      <!-- Arrows for Slide 2 -->
-      <label for="slide-1" class="arrow prev arrows-2" aria-label="Previous slide">&#10094;</label>
-      <label for="slide-3" class="arrow next arrows-2" aria-label="Next slide">&#10095;</label>
-
-      <!-- Arrows for Slide 3 -->
-      <label for="slide-2" class="arrow prev arrows-3" aria-label="Previous slide">&#10094;</label>
-      <label for="slide-4" class="arrow next arrows-3" aria-label="Next slide">&#10095;</label>
-
-      <!-- Arrows for Slide 4 -->
-      <label for="slide-3" class="arrow prev arrows-4" aria-label="Previous slide">&#10094;</label>
-      <label for="slide-1" class="arrow next arrows-4" aria-label="Next slide">&#10095;</label>
-
-      <!-- Bottom Dots -->
-      <div class="dots">
-        <label for="slide-1" aria-label="Go to slide 1"></label>
-        <label for="slide-2" aria-label="Go to slide 2"></label>
-        <label for="slide-3" aria-label="Go to slide 3"></label>
-        <label for="slide-4" aria-label="Go to slide 4"></label>
-      </div>
-    </div>
-  </section>
-
-    <section>
-      <div class="container center">
-        <h2>Getting Here</h2>
-        <p class="center">Taft Highway Church of Christ is in Signal Mountain, Tennessee.</p>
-      </div>
-
-    </section>
-<<<<<<< Updated upstream
-=======
->>>>>>> 92249537f23fd532f06ce1f3cbd8a069880eef28
 
       <!-- Add the confirmed worship schedule before removing hidden. -->
       <section hidden>
@@ -135,7 +139,6 @@
           </ul>
         </div>
       </section>
->>>>>>> Stashed changes
 
       <!-- Keep the street address and directions link alongside the map. -->
       <section class="soft-section">
@@ -153,7 +156,6 @@
               allowfullscreen
             ></iframe>
 
-<<<<<<< HEAD
             <div>
               <h3>Address and Parking</h3>
               <p>
@@ -184,66 +186,13 @@
           </p>
         </div>
       </section>
-=======
-<!-- USED AI TO HELP MAKE THE DIRECTIONS BUTTON WORK, I did not know how to do it -->
-    <div>
-      <h2>Visit Us</h2>
-      <p class="lead">We are located right off Main Street with free parking behind the building.</p>
-      <p><strong>Address:</strong> 554 US-127, Signal Mountain, TN 37377</p>
-      
-<<<<<<< Updated upstream
-      <!-- Map -->
-      <iframe
-        class="iframe1"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3260.42192179525!2d-85.36043168869415!3d35.19595805636439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8860f6a119331d35%3A0x1b3119fa6dcf3acb!2s554%20US-127%2C%20Signal%20Mountain%2C%20TN%2037377!5e0!3m2!1sen!2sus!4v1794502516558!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
-      </iframe>
 
-<!-- USED AI TO HELP MAKE THE DIRECTIONS BUTTON WORK, I did not know how to do it -->
-    <div>
-      <h2>Visit Us</h2>
-      <p class="lead">We are located right off Main Street with free parking behind the building.</p>
-      <p><strong>Address:</strong> 554 US-127, Signal Mountain, TN 37377</p>
-      
-=======
->>>>>>> Stashed changes
-      <!-- The button triggers the custom navigation script -->
-      <a href="#" onclick="startNativeNavigation(event)" class="button">Get Directions</a>
-    </div>
-
-    <script>
-    function startNativeNavigation(event) {
-      event.preventDefault();
-      
-      const address = "554+US-127,+Signal+Mountain,+TN+37377";
-      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-      // 1. If it's an Apple Device (iPhone/iPad), use Apple's native deep link map engine
-      if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        window.location.href = "maps://maps.google.com/maps?daddr=" + address + "&ll=";
-      } 
-      // 2. If it's an Android Device, use the strict Android Navigation Intent system
-      else if (/android/i.test(userAgent)) {
-        window.location.href = "google.navigation:q=" + address + "&mode=d";
-      } 
-      // 3. Desktop/Fallback: Open standard Google Maps Routing API in a new tab
-      else {
-        window.open("https://www.google.com/maps/dir/?api=1&destination=" + address, "_blank");
-      }
-    }
-    </script>
-
-</section>
-
-<<<<<<< Updated upstream
-=======
->>>>>>> 92249537f23fd532f06ce1f3cbd8a069880eef28
->>>>>>> Stashed changes
-
-      <!-- Section for the questions and links  -->
       <section>
         <div class="container">
           <h2 class="center">Questions About Your Visit?</h2>
-          <a class="button button-center" href="contact.html">Contact the Church</a>
+          <a class="button button-center" href="contact.html"
+            >Contact the Church</a
+          >
         </div>
       </section>
     </main>
